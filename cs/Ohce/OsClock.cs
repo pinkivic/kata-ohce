@@ -1,4 +1,9 @@
-﻿public class OsClock
+﻿public interface IClock
+{
+    int GetCurrentHour();
+}
+
+public class OsClock : IClock
 {
     public int GetCurrentHour()
     {

@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 public class Greeter
 {
-    private readonly OsClock _clock;
-    public Greeter()
-    {
-        _clock = new OsClock();   
-    }
+    private readonly IClock _clock;
 
+    public Greeter(IClock clock)
+    {
+        _clock = clock;
+    }
     public string Greet()
     {
         int hour = _clock.GetCurrentHour();
